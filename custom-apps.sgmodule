@@ -1,0 +1,7 @@
+#!name=Custom Apps
+#!desc=ChatGPT / MEXC / Talkatone routing rules
+
+[Rule]
+DOMAIN-SET,https://raw.githubusercontent.com/z7-btc/shadowrocket-custom-module/main/rules/chatgpt.list,CHATGPT
+DOMAIN-SET,https://raw.githubusercontent.com/z7-btc/shadowrocket-custom-module/main/rules/mexc.list,MEXC
+DOMAIN-SET,https://raw.githubusercontent.com/z7-btc/shadowrocket-custom-module/main/rules/talkatone.list,TALKTONE
