@@ -306,6 +306,11 @@ function main(config) {
   // ==============================
 
   const customRules = [
+    // Windows 联网体检域名（NCSI）必须走直连：
+    // 否则会被后面的 StaticResources 规则丢给代理节点，体检失败后系统会把
+    // Mihomo 虚拟网卡标记为"无法访问 Internet"。
+    "DOMAIN-SUFFIX,msftconnecttest.com,DIRECT",
+    "DOMAIN-SUFFIX,msftncsi.com,DIRECT",
     "RULE-SET,Z7_CHATGPT,CHATGPT",
     "RULE-SET,Z7_MEXC,MEXC",
     "RULE-SET,Z7_BITGET,BITGET",
