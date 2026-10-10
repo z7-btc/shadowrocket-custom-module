@@ -336,11 +336,9 @@ function main(config) {
       icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png",
       type: "select",
       proxies: [
-        "选择代理",
-        "香港节点",
+        "日本节点",
         "台湾节点",
         "新加坡节点",
-        "日本节点",
         "美国节点",
         "英国节点",
         "德国节点",
@@ -355,8 +353,6 @@ function main(config) {
       icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cryptocurrency_1.png",
       type: "select",
       proxies: [
-        "选择代理",
-        "香港节点",
         "台湾节点",
         "新加坡节点",
         "日本节点",
@@ -557,8 +553,6 @@ function main(config) {
       icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png",
       type: "select",
       proxies: [
-        "选择代理",
-        "香港节点",
         "台湾节点",
         "新加坡节点",
         "日本节点",
