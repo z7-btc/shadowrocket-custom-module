@@ -380,7 +380,6 @@ function main(config) {
         "德国节点",
         "印度节点",
         "马来西亚节点",
-        "选择代理",
         "手动选择",
       ]
     },
@@ -489,14 +488,13 @@ function main(config) {
       name: "巴哈姆特",
       icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png",
       type: "select",
-      proxies: ["台湾节点", "选择代理", "手动选择", "DIRECT"]
+      proxies: ["台湾节点", "手动选择", "DIRECT"]
     },
     {
       name: "Youtube",
       icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png",
       type: "select",
       proxies: [
-        "选择代理",
         "香港节点",
         "台湾节点",
         "新加坡节点",
@@ -515,7 +513,6 @@ function main(config) {
       icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Twitch.png",
       type: "select",
       proxies: [
-        "选择代理",
         "香港节点",
         "台湾节点",
         "新加坡节点",
@@ -534,7 +531,6 @@ function main(config) {
       icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png",
       type: "select",
       proxies: [
-        "选择代理",
         "香港节点",
         "台湾节点",
         "新加坡节点",
@@ -570,7 +566,6 @@ function main(config) {
       icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png",
       type: "select",
       proxies: [
-        "选择代理",
         "香港节点",
         "台湾节点",
         "新加坡节点",
@@ -646,7 +641,7 @@ function main(config) {
       name: "Truth Social",
       icon: "https://cdn.jsdelivr.net/gh/powerfullz/override-rules@master/icons/Truth_Social.png",
       type: "select",
-      proxies: ["美国节点", "选择代理", "手动选择"]
+      proxies: ["美国节点", "手动选择"]
     },
     {
       name: "E-Hentai",
