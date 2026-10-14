@@ -812,6 +812,9 @@ function main(config) {
 
   config["rule-providers"] = config["rule-providers"] || {};
 
+  // 注意：下面这 4 个 list 同时被 iOS Shadowrocket 的 DOMAIN-SET 直接引用，
+  // 必须写成「裸域名 + 点前缀」两行（如 chatgpt.com / .chatgpt.com），别用 "+." 前缀：
+  // Shadowrocket 不认 "+."，整行会被跳过，iPhone 上这 4 组规则会静默失效（df6e599 踩过，2026-10-14 修复）。
   const base = "https://raw.githubusercontent.com/z7-btc/shadowrocket-custom-module/main/rules/";
   const providers = {
     Z7_CHATGPT: "chatgpt.list",
