@@ -206,11 +206,11 @@ function main(config) {
       lazy: false
     },
     {
-      name: "英国住宅节点",
+      name: "墨西哥住宅节点",
       type: "url-test",
       "include-all": true,
       filter:
-        "(?i)(?:(?:英国|United Kingdom|UK|🇬🇧).*(?:家宽|住宅|Residential|Home|家庭)|(?:家宽|住宅|Residential|Home|家庭).*(?:英国|United Kingdom|UK|🇬🇧))",
+        "(?i)(?:(?:墨西哥|Mexico|🇲🇽).*(?:家宽|住宅|Residential|Home|家庭)|(?:家宽|住宅|Residential|Home|家庭).*(?:墨西哥|Mexico|🇲🇽))",
       url: "https://cp.cloudflare.com/generate_204",
       interval: 600,
       tolerance: 50,
@@ -268,9 +268,9 @@ function main(config) {
       name: "TALKTONE",
       type: "select",
       proxies: [
+        "墨西哥住宅节点",
         "美国住宅节点",
-        "加拿大住宅节点",
-        "英国住宅节点"
+        "加拿大住宅节点"
       ]
     }
   ];
