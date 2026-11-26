@@ -182,7 +182,41 @@ function main(config) {
       lazy: false
     },
 
-    // ---- 住宅节点（专门给 TALKTONE 等需要家宽 IP 的场景）----
+    // ---- 住宅（家宽）节点：按地区分类，供 TALKTONE 等需要家宽 IP 的场景 ----
+    // 节点名里「家宽/住宅」放地区前面或后面都认（两个方向都写了）
+    {
+      name: "香港住宅节点",
+      type: "url-test",
+      "include-all": true,
+      filter:
+        "(?i)(?:(?:香港|Hong Kong|🇭🇰).*(?:家宽|住宅|Residential|Home|家庭)|(?:家宽|住宅|Residential|Home|家庭).*(?:香港|Hong Kong|🇭🇰))",
+      url: "https://cp.cloudflare.com/generate_204",
+      interval: 600,
+      tolerance: 50,
+      lazy: false
+    },
+    {
+      name: "台湾住宅节点",
+      type: "url-test",
+      "include-all": true,
+      filter:
+        "(?i)(?:(?:台湾|Taiwan|🇹🇼).*(?:家宽|住宅|Residential|Home|家庭)|(?:家宽|住宅|Residential|Home|家庭).*(?:台湾|Taiwan|🇹🇼))",
+      url: "https://cp.cloudflare.com/generate_204",
+      interval: 600,
+      tolerance: 50,
+      lazy: false
+    },
+    {
+      name: "英国住宅节点",
+      type: "url-test",
+      "include-all": true,
+      filter:
+        "(?i)(?:(?:英国|United Kingdom|UK|🇬🇧).*(?:家宽|住宅|Residential|Home|家庭)|(?:家宽|住宅|Residential|Home|家庭).*(?:英国|United Kingdom|UK|🇬🇧))",
+      url: "https://cp.cloudflare.com/generate_204",
+      interval: 600,
+      tolerance: 50,
+      lazy: false
+    },
     {
       name: "美国住宅节点",
       type: "url-test",
@@ -211,6 +245,17 @@ function main(config) {
       "include-all": true,
       filter:
         "(?i)(?:(?:墨西哥|Mexico|🇲🇽).*(?:家宽|住宅|Residential|Home|家庭)|(?:家宽|住宅|Residential|Home|家庭).*(?:墨西哥|Mexico|🇲🇽))",
+      url: "https://cp.cloudflare.com/generate_204",
+      interval: 600,
+      tolerance: 50,
+      lazy: false
+    },
+    {
+      name: "泰国住宅节点",
+      type: "url-test",
+      "include-all": true,
+      filter:
+        "(?i)(?:(?:泰国|Thailand|🇹🇭).*(?:家宽|住宅|Residential|Home|家庭)|(?:家宽|住宅|Residential|Home|家庭).*(?:泰国|Thailand|🇹🇭))",
       url: "https://cp.cloudflare.com/generate_204",
       interval: 600,
       tolerance: 50,
@@ -302,6 +347,13 @@ function main(config) {
         "德国节点",
         "印度节点",
         "马来西亚节点",
+        "香港住宅节点",
+        "台湾住宅节点",
+        "英国住宅节点",
+        "美国住宅节点",
+        "加拿大住宅节点",
+        "墨西哥住宅节点",
+        "泰国住宅节点",
         "手动选择",
         "DIRECT",
       ]
@@ -706,7 +758,24 @@ function main(config) {
       url: "https://cp.cloudflare.com",
       interval: 60,
       tolerance: 20,
-      proxies: ["香港节点", "台湾节点", "新加坡节点", "日本节点", "美国节点", "英国节点", "德国节点", "印度节点", "马来西亚节点"]
+      proxies: [
+        "香港节点",
+        "台湾节点",
+        "新加坡节点",
+        "日本节点",
+        "美国节点",
+        "英国节点",
+        "德国节点",
+        "印度节点",
+        "马来西亚节点",
+        "香港住宅节点",
+        "台湾住宅节点",
+        "英国住宅节点",
+        "美国住宅节点",
+        "加拿大住宅节点",
+        "墨西哥住宅节点",
+        "泰国住宅节点"
+      ]
     },
     {
       name: "故障转移",
@@ -725,6 +794,13 @@ function main(config) {
         "德国节点",
         "印度节点",
         "马来西亚节点",
+        "香港住宅节点",
+        "台湾住宅节点",
+        "英国住宅节点",
+        "美国住宅节点",
+        "加拿大住宅节点",
+        "墨西哥住宅节点",
+        "泰国住宅节点"
       ]
     },
     {
@@ -791,6 +867,13 @@ function main(config) {
         "德国节点",
         "印度节点",
         "马来西亚节点",
+        "香港住宅节点",
+        "台湾住宅节点",
+        "英国住宅节点",
+        "美国住宅节点",
+        "加拿大住宅节点",
+        "墨西哥住宅节点",
+        "泰国住宅节点",
       ]
     },
   ];
