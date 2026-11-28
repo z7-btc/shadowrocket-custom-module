@@ -918,6 +918,14 @@ function main(config) {
     ...utilityGroups.filter(g => !customNames.has(g.name))
   ];
 
+  // 空组兜底改成「拒绝」而不是「直连」：
+  // include-all 组过滤不到任何节点时，内核默认会塞一个 COMPATIBLE 占位成员——它本质是
+  // DIRECT，会让空组显示看似健康的「假 ping」，流量还会静默走本机真实 IP。改成 REJECT 后，
+  // 空组直接 ping 不通、流量也拒绝；对非空组没有任何影响。（2026-11-28 用本机内核实测）
+  config["proxy-groups"].forEach(g => {
+    if (g["include-all"]) g["empty-fallback"] = "REJECT";
+  });
+
   // ==============================
   // 4. 规则集（rule-providers）：自己的 4 个 + 通用 12 个
   // ==============================
