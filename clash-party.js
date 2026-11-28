@@ -181,6 +181,16 @@ function main(config) {
       tolerance: 50,
       lazy: false
     },
+    {
+      name: "土耳其节点",
+      type: "url-test",
+      "include-all": true,
+      filter: "(?i)(土耳其|Turkey|Türkiye|🇹🇷)",
+      url: "https://cp.cloudflare.com/generate_204",
+      interval: 600,
+      tolerance: 50,
+      lazy: false
+    },
 
     // ---- 住宅（家宽）节点：按地区分类，供 TALKTONE 等需要家宽 IP 的场景 ----
     // 节点名里「家宽/住宅」放地区前面或后面都认（两个方向都写了）
@@ -256,6 +266,17 @@ function main(config) {
       "include-all": true,
       filter:
         "(?i)(?:(?:泰国|Thailand|🇹🇭).*(?:家宽|住宅|Residential|Home|家庭)|(?:家宽|住宅|Residential|Home|家庭).*(?:泰国|Thailand|🇹🇭))",
+      url: "https://cp.cloudflare.com/generate_204",
+      interval: 600,
+      tolerance: 50,
+      lazy: false
+    },
+    {
+      name: "土耳其住宅节点",
+      type: "url-test",
+      "include-all": true,
+      filter:
+        "(?i)(?:(?:土耳其|Turkey|Türkiye|🇹🇷).*(?:家宽|住宅|Residential|Home|家庭)|(?:家宽|住宅|Residential|Home|家庭).*(?:土耳其|Turkey|Türkiye|🇹🇷))",
       url: "https://cp.cloudflare.com/generate_204",
       interval: 600,
       tolerance: 50,
@@ -347,6 +368,7 @@ function main(config) {
         "德国节点",
         "印度节点",
         "马来西亚节点",
+        "土耳其节点",
         "香港住宅节点",
         "台湾住宅节点",
         "英国住宅节点",
@@ -354,6 +376,7 @@ function main(config) {
         "加拿大住宅节点",
         "墨西哥住宅节点",
         "泰国住宅节点",
+        "土耳其住宅节点",
         "手动选择",
         "DIRECT",
       ]
@@ -768,13 +791,15 @@ function main(config) {
         "德国节点",
         "印度节点",
         "马来西亚节点",
+        "土耳其节点",
         "香港住宅节点",
         "台湾住宅节点",
         "英国住宅节点",
         "美国住宅节点",
         "加拿大住宅节点",
         "墨西哥住宅节点",
-        "泰国住宅节点"
+        "泰国住宅节点",
+        "土耳其住宅节点"
       ]
     },
     {
@@ -794,13 +819,15 @@ function main(config) {
         "德国节点",
         "印度节点",
         "马来西亚节点",
+        "土耳其节点",
         "香港住宅节点",
         "台湾住宅节点",
         "英国住宅节点",
         "美国住宅节点",
         "加拿大住宅节点",
         "墨西哥住宅节点",
-        "泰国住宅节点"
+        "泰国住宅节点",
+        "土耳其住宅节点"
       ]
     },
     {
@@ -867,6 +894,7 @@ function main(config) {
         "德国节点",
         "印度节点",
         "马来西亚节点",
+        "土耳其节点",
         "香港住宅节点",
         "台湾住宅节点",
         "英国住宅节点",
@@ -874,6 +902,7 @@ function main(config) {
         "加拿大住宅节点",
         "墨西哥住宅节点",
         "泰国住宅节点",
+        "土耳其住宅节点",
       ]
     },
   ];
